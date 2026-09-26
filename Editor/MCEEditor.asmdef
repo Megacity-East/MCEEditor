@@ -2,7 +2,7 @@
     "name": "MCEEditor",
     "rootNamespace": "MCEEditor",
     "references": [
-        "GUID:7a2f297f9ce8344358ed3600836fcf82"
+        "MCELoader"
     ],
     "includePlatforms": [
         "Editor"

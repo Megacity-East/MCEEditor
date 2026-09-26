@@ -2,8 +2,8 @@
     "name": "MCEEditor.Components",
     "rootNamespace": "MCEEditor.Components",
     "references": [
-        "GUID:5a5f60778bb7201cfa07dcf01e4b3183",
-        "GUID:7a2f297f9ce8344358ed3600836fcf82"
+        "MCEEditor",
+        "MCELoader"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
