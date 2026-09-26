@@ -1,0 +1,21 @@
+{
+  "name": "dev.blanky.megacityeasteditor",
+  "displayName": "Megacity East Map Editor",
+  "description": "The Map Editor for the Megacity East project",
+  "version": "0.0.1",
+  "unity": "2022.3",
+  "unityRelease": "62f3",
+  "author": "blankochan",
+  "keywords": [
+    "MCEEditor",
+    "Editor",
+    "Airframe Ultra"
+  ],
+  "samples": [
+    {
+      "displayName": "Required Assets",
+      "description": "Contains all the prefabs and assets that are required for the editor",
+      "path": "Samples~/Required"
+    }
+  ]
+}

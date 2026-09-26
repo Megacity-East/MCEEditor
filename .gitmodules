@@ -1,0 +1,4 @@
+[submodule "Editor/Shared"]
+	path = Editor/Shared
+	url = https://github.com/Mega-City-East/MCEShared
+	branch = master

@@ -1,0 +1,20 @@
+{
+    "name": "MCEEditor.Builder",
+    "rootNamespace": "MCEEditor.Builder",
+    "references": [
+        "GUID:d20d177d06c5016b7a15a6c58225d14c",
+        "GUID:5a5f60778bb7201cfa07dcf01e4b3183",
+        "GUID:7a2f297f9ce8344358ed3600836fcf82"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

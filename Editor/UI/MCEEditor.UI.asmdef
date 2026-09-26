@@ -1,0 +1,21 @@
+{
+    "name": "MCEEditor.UI",
+    "rootNamespace": "MCEEditor.UI",
+    "references": [
+        "GUID:5a5f60778bb7201cfa07dcf01e4b3183",
+        "GUID:d20d177d06c5016b7a15a6c58225d14c",
+        "GUID:343deaaf83e0cee4ca978e7df0b80d21",
+        "GUID:db2020f61b76a7c33b6c5f862fc02da0"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
