@@ -17,5 +17,8 @@
       "description": "Contains all the prefabs and assets that are required for the editor",
       "path": "Samples~/Required"
     }
-  ]
+  ],
+  "dependencies": {
+    "com.unity.nuget.newtonsoft-json": "3.2.2"
+  }
 }
