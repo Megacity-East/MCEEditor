@@ -9,6 +9,7 @@ namespace MCEEditor.Builder
         public MapConfig MapConfig;
 
         public List<MapStaticCollider3D> mapStaticCollider3Ds = new();
+        public List<SpawnPointWithOrientation> spawnPoints = new();
 
     }
 }
