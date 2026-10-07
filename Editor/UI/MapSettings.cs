@@ -6,6 +6,8 @@ using System.Linq;
 
 using MCEEditor.Components;
 using MCEEditor.Builder;
+using System.IO;
+using UnityEngine.SceneManagement;
 
 namespace MCEEditor.UI
 {
@@ -20,7 +22,7 @@ namespace MCEEditor.UI
             wnd.titleContent = new GUIContent("Map Settings");
 
         }
-        
+
         public void CreateGUI()
         {
             VisualElement root = rootVisualElement;
@@ -31,12 +33,14 @@ namespace MCEEditor.UI
             {
                 WorldRoot worldRoot = roots.First();
                 Action buildAction = () => MapBuilder.BuildMap(worldRoot);
-                Button TriggerBuild = new(buildAction);
+                Button TriggerBuild = new(buildAction)
+                {
+                    text = "Build Map"
+                };
 
-                TriggerBuild.text = "Build Map";
                 root.Add(TriggerBuild);
             }
-            
+
         }
     }
 }

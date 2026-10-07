@@ -14,7 +14,6 @@ namespace MCEEditor.Components
     {
         private Collider[] colliders;
 
-        public bool IsMeshCollider => (UnityCollider is MeshCollider);
         public bool HasAnyColliders => colliders.Length > 0;
         public bool HasMultipleColliders => colliders.Length > 1;
 
@@ -34,6 +33,7 @@ namespace MCEEditor.Components
         }
 
 #if UNITY_EDITOR
+
         public MapStaticCollider3D? GenerateStaticCollider()
         {
             MapStaticCollider3D collider3D = new()
@@ -74,11 +74,10 @@ namespace MCEEditor.Components
                 return collider3D;
             }
 
-            if (IsMeshCollider)
+            if (UnityCollider is MeshCollider meshCollider)
             {
-
-                Debug.LogWarning($"[QuantumCollider] '{UnityEditor.Search.SearchUtils.GetTransformPath(this.transform)}' contains a MeshCollider which is currently unsupported.");
-                return null; // Unsupported
+                collider3D.ShapeType = Shape3DType.Mesh;
+                return collider3D;
             }
 
             return null;
@@ -103,6 +102,13 @@ namespace MCEEditor.Components
             if (GenerateStaticCollider() is MapStaticCollider3D collider3D)
             {
                 collider3D.StaticData.ColliderIndex = colliderIndex;
+
+                if(collider3D.ShapeType == Shape3DType.Mesh)
+                {
+                    Mesh colliderMesh = ((MeshCollider)UnityCollider).sharedMesh;
+                    session.staticMeshColliders.Add(colliderIndex,colliderMesh);
+                }
+
                 session.mapStaticCollider3Ds.Add(collider3D);
             }
             ;

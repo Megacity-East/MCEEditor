@@ -13,7 +13,6 @@ namespace MCEEditor.Components
     public class ConvertColliders : MCEComponentBase
     {
         public Collider[] Colliders => this.GetComponentsInChildren<Collider>();
-        public bool HasMeshColliders => Colliders.Any(collider => collider is MeshCollider);
 
 #if UNITY_EDITOR
 
