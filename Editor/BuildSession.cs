@@ -12,6 +12,7 @@ namespace MCEEditor.Builder
         public List<MapStaticCollider3D> mapStaticCollider3Ds = new();
         public List<SpawnPointWithOrientation> spawnPoints = new();
         public Dictionary<int,Mesh> staticMeshColliders = new();
+        public List<ComponentPrototypeSet> mapEntities = new();
 
     }
 }

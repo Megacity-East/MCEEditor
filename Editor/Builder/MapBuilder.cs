@@ -39,6 +39,7 @@ namespace MCEEditor.Builder
 
             session.Map.StaticColliders3D = session.mapStaticCollider3Ds.ToArray();
             session.MapConfig.spawnPoints = session.spawnPoints.ToArray();
+            session.Map.MapEntities = session.mapEntities.ToArray();
 
             MCEManifest manifest = new()
             {
