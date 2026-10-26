@@ -32,7 +32,11 @@ namespace MCEEditor.UI
             if (roots.Length == 1)
             {
                 WorldRoot worldRoot = roots.First();
-                Action buildAction = () => MapBuilder.BuildMap(worldRoot);
+                Action buildAction = () => 
+                {
+                    MapBuilder.BuildMap(worldRoot);
+                    Close();
+                };
                 Button TriggerBuild = new(buildAction)
                 {
                     text = "Build Map"

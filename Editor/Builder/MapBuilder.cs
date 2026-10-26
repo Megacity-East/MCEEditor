@@ -11,6 +11,7 @@ using MCELoader;
 using MCELoader.Shared;
 using MCELoader.Shared.ProxyTypes;
 using System.Collections.Generic;
+using UnityEditor.SceneManagement;
 
 namespace MCEEditor.Builder
 {
@@ -19,6 +20,8 @@ namespace MCEEditor.Builder
 
         public static void BuildMap(WorldRoot mapRoot)
         {
+            EditorSceneManager.SaveOpenScenes();
+
             BuildSession session = new()
             {
                 Map = new(),
