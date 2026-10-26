@@ -110,8 +110,10 @@ namespace MCEEditor.Builder
 
 
             FileInfo sceneBundleFile = bundleDirectory.GetFiles().First(file => file.Name is "scene");
-            FileInfo assetsBundleFile = bundleDirectory.GetFiles().First(file => file.Name is "assets");
+            FileInfo assetsBundleFile = bundleDirectory.GetFiles().FirstOrDefault(file => file.Name is "assets");
+
             sceneBundleFile.MoveTo(Path.Combine(zipArchivePath, "scene"));
+            if (assetsBundleFile != default)
             assetsBundleFile.MoveTo(Path.Combine(zipArchivePath, "assets"));
 
             AssetDatabase.DeleteAssets(staticMeshPaths.ToArray(), new());
